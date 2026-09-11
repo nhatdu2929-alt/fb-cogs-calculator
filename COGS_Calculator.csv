@@ -1,0 +1,83 @@
+===== SHEET 1: NGUYÊN LIỆU (Ingredients) =====
+Mã NL,Tên nguyên liệu,Đơn vị,Giá / Đơn vị (VNĐ),Ghi chú
+CFF001,Cà phê Robusta,kg,250000,Cà phê rang xay
+CFF002,Cà phê Arabica,kg,350000,Cà phê rang xay premium
+MLK001,Sữa tươi,lít,35000,Sữa 3.5% béo
+MLK002,Sữa đặc,lít,60000,Sữa đặc nguyên chất
+SGL001,Đường trắng,kg,20000,Đường kính
+SGL002,Đường nâu,kg,25000,Đường nâu
+ICE001,Đá viên,kg,5000,Đá viên lạnh
+WTR001,Nước lọc,lít,3000,Nước lọc uống được
+CRM001,Kem tươi,lít,80000,Kem tươi 35%
+CHC001,Sô cô la,kg,150000,Bột sô cô la
+VNL001,Vanilla,lít,120000,Vanilla đen
+CND001,Bánh nướng,cái,15000,Bánh nướng kèm cà phê
+STR001,Ống hút,cái,500,Ống hút nhựa
+CUP001,Cốc giấy 12oz,cái,2000,Cốc giấy 12oz
+CUP002,Cốc giấy 16oz,cái,2500,Cốc giấy 16oz
+NP001,Napkin,tờ,100,Khăn giấy
+
+===== SHEET 2: CÔNG THỨC SẢN PHẨM (Product Recipes) =====
+Mã SP,Tên sản phẩm,Cốc/Size,Mã NL,Tên NL,Lượng sử dụng,Đơn vị,Giá NL/Đơn vị,Thành tiền NL
+SP001,Americano,12oz,CFF001,Cà phê Robusta,0.025,kg,250000,6250
+SP001,Americano,12oz,WTR001,Nước lọc,0.25,lít,3000,750
+SP001,Americano,12oz,CUP001,Cốc giấy 12oz,1,cái,2000,2000
+SP001,Americano,12oz,STR001,Ống hút,1,cái,500,500
+SP001,Americano,12oz,NP001,Napkin,2,tờ,100,200
+SP002,Cappuccino,12oz,CFF001,Cà phê Robusta,0.02,kg,250000,5000
+SP002,Cappuccino,12oz,MLK001,Sữa tươi,0.15,lít,35000,5250
+SP002,Cappuccino,12oz,CUP001,Cốc giấy 12oz,1,cái,2000,2000
+SP002,Cappuccino,12oz,STR001,Ống hút,1,cái,500,500
+SP002,Cappuccino,12oz,NP001,Napkin,2,tờ,100,200
+SP003,Latte,16oz,CFF001,Cà phê Robusta,0.02,kg,250000,5000
+SP003,Latte,16oz,MLK001,Sữa tươi,0.25,lít,35000,8750
+SP003,Latte,16oz,CUP002,Cốc giấy 16oz,1,cái,2500,2500
+SP003,Latte,16oz,STR001,Ống hút,1,cái,500,500
+SP003,Latte,16oz,NP001,Napkin,2,tờ,100,200
+SP004,Espresso,8oz,CFF002,Cà phê Arabica,0.018,kg,350000,6300
+SP004,Espresso,8oz,CUP001,Cốc giấy 12oz,1,cái,2000,2000
+SP004,Espresso,8oz,NP001,Napkin,2,tờ,100,200
+SP005,Iced Coffee,16oz,CFF001,Cà phê Robusta,0.025,kg,250000,6250
+SP005,Iced Coffee,16oz,MLK001,Sữa tươi,0.15,lít,35000,5250
+SP005,Iced Coffee,16oz,ICE001,Đá viên,0.1,kg,5000,500
+SP005,Iced Coffee,16oz,CUP002,Cốc giấy 16oz,1,cái,2500,2500
+SP005,Iced Coffee,16oz,STR001,Ống hút,1,cái,500,500
+SP005,Iced Coffee,16oz,NP001,Napkin,2,tờ,100,200
+SP006,Mocha,12oz,CFF001,Cà phê Robusta,0.02,kg,250000,5000
+SP006,Mocha,12oz,MLK001,Sữa tươi,0.15,lít,35000,5250
+SP006,Mocha,12oz,CHC001,Sô cô la,0.02,kg,150000,3000
+SP006,Mocha,12oz,CUP001,Cốc giấy 12oz,1,cái,2000,2000
+SP006,Mocha,12oz,STR001,Ống hút,1,cái,500,500
+SP006,Mocha,12oz,NP001,Napkin,2,tờ,100,200
+
+===== SHEET 3: TÍNH GIÁ VỐN (COGS Calculation) =====
+Mã SP,Tên sản phẩm,Cốc/Size,Tổng chi phí NL (VNĐ),Giá bán (VNĐ),Lợi nhuận (VNĐ),Lợi nhuận %,Tỷ lệ COGS %
+SP001,Americano,12oz,9700,90000,80300,89.22%,10.78%
+SP002,Cappuccino,12oz,12950,110000,97050,88.23%,11.77%
+SP003,Latte,16oz,17450,130000,112550,86.58%,13.42%
+SP004,Espresso,8oz,8500,120000,111500,92.92%,7.08%
+SP005,Iced Coffee,16oz,15250,125000,109750,87.80%,12.20%
+SP006,Mocha,12oz,15950,140000,124050,88.61%,11.39%
+
+===== SHEET 4: PHÂN TÍCH (Analysis) =====
+Chỉ số,Giá trị
+Tỷ lệ COGS trung bình,11.10%
+Lợi nhuận trung bình,88.90%
+Sản phẩm có COGS thấp nhất,SP004 - Espresso (7.08%)
+Sản phẩm có COGS cao nhất,SP003 - Latte (13.42%)
+Sản phẩm bán chạy nhất (dự tính),SP001 - Americano
+Doanh thu dự tính (100 ly/ngày),11,585,000 VNĐ
+Chi phí NL dự tính (100 ly/ngày),1,284,500 VNĐ
+Lợi nhuận dự tính (100 ly/ngày),10,300,500 VNĐ
+
+===== HƯỚNG DẪN SỬ DỤNG =====
+1. SHEET "Nguyên liệu": Cập nhật giá nguyên liệu theo thường xuyên
+2. SHEET "Công thức sản phẩm": Điều chỉnh lượng nguyên liệu theo recipe của bạn
+3. SHEET "Tính giá vốn": Tự động tính COGS khi thay đổi giá bán
+4. SHEET "Phân tích": Xem overview chi phí và lợi nhuận
+
+CÔNG THỨC TÍNH:
+- Chi phí NL = Tổng (Lượng sử dụng × Giá nguyên liệu)
+- Lợi nhuận = Giá bán - Chi phí NL
+- Lợi nhuận % = (Lợi nhuận / Giá bán) × 100
+- Tỷ lệ COGS % = (Chi phí NL / Giá bán) × 100
