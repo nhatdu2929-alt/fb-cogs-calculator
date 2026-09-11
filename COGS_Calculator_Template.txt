@@ -1,0 +1,201 @@
+COGS Calculator - F&B Products
+Professional Excel Template with Automatic Calculations
+
+=================================================================================
+SHEET 1: NGUYÊN LIỆU (Ingredients Master Data)
+=================================================================================
+
+| A | B | C | D | E |
+|---|---|---|---|---|
+| Mã NL | Tên nguyên liệu | Đơn vị | Giá/Đơn vị (VNĐ) | Ghi chú |
+| CFF001 | Cà phê Robusta | kg | 250000 | Cà phê rang xay |
+| CFF002 | Cà phê Arabica | kg | 350000 | Cà phê rang xay premium |
+| MLK001 | Sữa tươi | lít | 35000 | Sữa 3.5% béo |
+| MLK002 | Sữa đặc | lít | 60000 | Sữa đặc nguyên chất |
+| SGL001 | Đường trắng | kg | 20000 | Đường kính |
+| SGL002 | Đường nâu | kg | 25000 | Đường nâu |
+| ICE001 | Đá viên | kg | 5000 | Đá viên lạnh |
+| WTR001 | Nước lọc | lít | 3000 | Nước lọc uống được |
+| CRM001 | Kem tươi | lít | 80000 | Kem tươi 35% |
+| CHC001 | Sô cô la | kg | 150000 | Bột sô cô la |
+| VNL001 | Vanilla | lít | 120000 | Vanilla đen |
+| CUP001 | Cốc giấy 12oz | cái | 2000 | Cốc giấy 12oz |
+| CUP002 | Cốc giấy 16oz | cái | 2500 | Cốc giấy 16oz |
+| STR001 | Ống hút | cái | 500 | Ống hút nhựa |
+| NP001 | Napkin | tờ | 100 | Khăn giấy |
+
+=================================================================================
+SHEET 2: CÔNG THỨC SẢN PHẨM (Product Recipes with Formulas)
+=================================================================================
+
+| A | B | C | D | E | F | G | H | I |
+|---|---|---|---|---|---|---|---|---|
+| Mã SP | Tên sản phẩm | Size | Mã NL | Tên NL | Lượng | Đơn vị | Giá/Đơn vị | Thành tiền |
+| SP001 | Americano | 12oz | CFF001 | Cà phê Robusta | 0.025 | kg | =VLOOKUP(D3,$Nguyên liệu.A:D,4,0) | =F3*H3 |
+| SP001 | Americano | 12oz | WTR001 | Nước lọc | 0.25 | lít | =VLOOKUP(D4,$Nguyên liệu.A:D,4,0) | =F4*H4 |
+| SP001 | Americano | 12oz | CUP001 | Cốc giấy 12oz | 1 | cái | =VLOOKUP(D5,$Nguyên liệu.A:D,4,0) | =F5*H5 |
+| SP001 | Americano | 12oz | STR001 | Ống hút | 1 | cái | =VLOOKUP(D6,$Nguyên liệu.A:D,4,0) | =F6*H6 |
+| SP001 | Americano | 12oz | NP001 | Napkin | 2 | tờ | =VLOOKUP(D7,$Nguyên liệu.A:D,4,0) | =F7*H7 |
+| SP002 | Cappuccino | 12oz | CFF001 | Cà phê Robusta | 0.02 | kg | =VLOOKUP(D8,$Nguyên liệu.A:D,4,0) | =F8*H8 |
+| SP002 | Cappuccino | 12oz | MLK001 | Sữa tươi | 0.15 | lít | =VLOOKUP(D9,$Nguyên liệu.A:D,4,0) | =F9*H9 |
+| SP002 | Cappuccino | 12oz | CUP001 | Cốc giấy 12oz | 1 | cái | =VLOOKUP(D10,$Nguyên liệu.A:D,4,0) | =F10*H10 |
+| SP002 | Cappuccino | 12oz | STR001 | Ống hút | 1 | cái | =VLOOKUP(D11,$Nguyên liệu.A:D,4,0) | =F11*H11 |
+| SP002 | Cappuccino | 12oz | NP001 | Napkin | 2 | tờ | =VLOOKUP(D12,$Nguyên liệu.A:D,4,0) | =F12*H12 |
+| SP003 | Latte | 16oz | CFF001 | Cà phê Robusta | 0.02 | kg | =VLOOKUP(D13,$Nguyên liệu.A:D,4,0) | =F13*H13 |
+| SP003 | Latte | 16oz | MLK001 | Sữa tươi | 0.25 | lít | =VLOOKUP(D14,$Nguyên liệu.A:D,4,0) | =F14*H14 |
+| SP003 | Latte | 16oz | CUP002 | Cốc giấy 16oz | 1 | cái | =VLOOKUP(D15,$Nguyên liệu.A:D,4,0) | =F15*H15 |
+| SP003 | Latte | 16oz | STR001 | Ống hút | 1 | cái | =VLOOKUP(D16,$Nguyên liệu.A:D,4,0) | =F16*H16 |
+| SP003 | Latte | 16oz | NP001 | Napkin | 2 | tờ | =VLOOKUP(D17,$Nguyên liệu.A:D,4,0) | =F17*H17 |
+| SP004 | Espresso | 8oz | CFF002 | Cà phê Arabica | 0.018 | kg | =VLOOKUP(D18,$Nguyên liệu.A:D,4,0) | =F18*H18 |
+| SP004 | Espresso | 8oz | CUP001 | Cốc giấy 12oz | 1 | cái | =VLOOKUP(D19,$Nguyên liệu.A:D,4,0) | =F19*H19 |
+| SP004 | Espresso | 8oz | NP001 | Napkin | 2 | tờ | =VLOOKUP(D20,$Nguyên liệu.A:D,4,0) | =F20*H20 |
+| SP005 | Iced Coffee | 16oz | CFF001 | Cà phê Robusta | 0.025 | kg | =VLOOKUP(D21,$Nguyên liệu.A:D,4,0) | =F21*H21 |
+| SP005 | Iced Coffee | 16oz | MLK001 | Sữa tươi | 0.15 | lít | =VLOOKUP(D22,$Nguyên liệu.A:D,4,0) | =F22*H22 |
+| SP005 | Iced Coffee | 16oz | ICE001 | Đá viên | 0.1 | kg | =VLOOKUP(D23,$Nguyên liệu.A:D,4,0) | =F23*H23 |
+| SP005 | Iced Coffee | 16oz | CUP002 | Cốc giấy 16oz | 1 | cái | =VLOOKUP(D24,$Nguyên liệu.A:D,4,0) | =F24*H24 |
+| SP005 | Iced Coffee | 16oz | STR001 | Ống hút | 1 | cái | =VLOOKUP(D25,$Nguyên liệu.A:D,4,0) | =F25*H25 |
+| SP005 | Iced Coffee | 16oz | NP001 | Napkin | 2 | tờ | =VLOOKUP(D26,$Nguyên liệu.A:D,4,0) | =F26*H26 |
+| SP006 | Mocha | 12oz | CFF001 | Cà phê Robusta | 0.02 | kg | =VLOOKUP(D27,$Nguyên liệu.A:D,4,0) | =F27*H27 |
+| SP006 | Mocha | 12oz | MLK001 | Sữa tươi | 0.15 | lít | =VLOOKUP(D28,$Nguyên liệu.A:D,4,0) | =F28*H28 |
+| SP006 | Mocha | 12oz | CHC001 | Sô cô la | 0.02 | kg | =VLOOKUP(D29,$Nguyên liệu.A:D,4,0) | =F29*H29 |
+| SP006 | Mocha | 12oz | CUP001 | Cốc giấy 12oz | 1 | cái | =VLOOKUP(D30,$Nguyên liệu.A:D,4,0) | =F30*H30 |
+| SP006 | Mocha | 12oz | STR001 | Ống hút | 1 | cái | =VLOOKUP(D31,$Nguyên liệu.A:D,4,0) | =F31*H31 |
+| SP006 | Mocha | 12oz | NP001 | Napkin | 2 | tờ | =VLOOKUP(D32,$Nguyên liệu.A:D,4,0) | =F32*H32 |
+
+=================================================================================
+SHEET 3: TÍNH GIÁ VỐN (COGS Calculation - Main Analysis)
+=================================================================================
+
+| A | B | C | D | E | F | G | H | I |
+|---|---|---|---|---|---|---|---|---|
+| Mã SP | Tên sản phẩm | Size | Tổng Chi phí NL | Giá bán (VNĐ) | Lợi nhuận (VNĐ) | Lợi nhuận % | Tỷ lệ COGS % | Trạng thái |
+| SP001 | Americano | 12oz | =SUMIF($Công thức.$A:$A,A2,$Công thức.$I:$I) | 90000 | =E2-D2 | =IF(E2=0,0,(F2/E2)*100) | =IF(E2=0,0,(D2/E2)*100) | =IF(H2<15%,"✓ Tốt",IF(H2<20%,"△ Bình thường","✗ Cao")) |
+| SP002 | Cappuccino | 12oz | =SUMIF($Công thức.$A:$A,A3,$Công thức.$I:$I) | 110000 | =E3-D3 | =IF(E3=0,0,(F3/E3)*100) | =IF(E3=0,0,(D3/E3)*100) | =IF(H3<15%,"✓ Tốt",IF(H3<20%,"△ Bình thường","✗ Cao")) |
+| SP003 | Latte | 16oz | =SUMIF($Công thức.$A:$A,A4,$Công thức.$I:$I) | 130000 | =E4-D4 | =IF(E4=0,0,(F4/E4)*100) | =IF(E4=0,0,(D4/E4)*100) | =IF(H4<15%,"✓ Tốt",IF(H4<20%,"△ Bình thường","✗ Cao")) |
+| SP004 | Espresso | 8oz | =SUMIF($Công thức.$A:$A,A5,$Công thức.$I:$I) | 120000 | =E5-D5 | =IF(E5=0,0,(F5/E5)*100) | =IF(E5=0,0,(D5/E5)*100) | =IF(H5<15%,"✓ Tốt",IF(H5<20%,"△ Bình thường","✗ Cao")) |
+| SP005 | Iced Coffee | 16oz | =SUMIF($Công thức.$A:$A,A6,$Công thức.$I:$I) | 125000 | =E6-D6 | =IF(E6=0,0,(F6/E6)*100) | =IF(E6=0,0,(D6/E6)*100) | =IF(H6<15%,"✓ Tốt",IF(H6<20%,"△ Bình thường","✗ Cao")) |
+| SP006 | Mocha | 12oz | =SUMIF($Công thức.$A:$A,A7,$Công thức.$I:$I) | 140000 | =E7-D7 | =IF(E7=0,0,(F7/E7)*100) | =IF(E7=0,0,(D7/E7)*100) | =IF(H7<15%,"✓ Tốt",IF(H7<20%,"△ Bình thường","✗ Cao")) |
+
+=================================================================================
+SHEET 4: DOANH THU & LỢI NHUẬN (Revenue & Profit Forecast)
+=================================================================================
+
+| A | B | C | D | E | F | G |
+|---|---|---|---|---|---|---|
+| Mã SP | Tên sản phẩm | Giá bán | Số lượng/ngày | Doanh thu/ngày | Chi phí NL/ngày | Lợi nhuận/ngày |
+| SP001 | Americano | 90000 | 30 | =B2*C2 | =(Tính giá vốn!D2)*D2 | =E2-F2 |
+| SP002 | Cappuccino | 110000 | 20 | =B3*C3 | =(Tính giá vốn!D3)*D3 | =E3-F3 |
+| SP003 | Latte | 130000 | 25 | =B4*C4 | =(Tính giá vốn!D4)*D4 | =E4-F4 |
+| SP004 | Espresso | 120000 | 15 | =B5*C5 | =(Tính giá vốn!D5)*D5 | =E5-F5 |
+| SP005 | Iced Coffee | 125000 | 20 | =B6*C6 | =(Tính giá vốn!D6)*D6 | =E6-F6 |
+| SP006 | Mocha | 140000 | 10 | =B7*C7 | =(Tính giá vốn!D7)*D7 | =E7-F7 |
+| | TỔNG CỘNG | | =SUM(D2:D7) | =SUM(E2:E7) | =SUM(F2:F7) | =SUM(G2:G7) |
+
+=================================================================================
+SHEET 5: PHÂN TÍCH CHỈ SỐ (Key Performance Indicators)
+=================================================================================
+
+| A | B | C | D |
+|---|---|---|---|
+| Chỉ số | Giá trị | Công thức | Ghi chú |
+| Tỷ lệ COGS trung bình | =AVERAGE('Tính giá vốn'!H2:H7) | AVERAGE | % chi phí vốn/giá bán |
+| Lợi nhuận trung bình | =100-B2 | =100-B2 | % lợi nhuận/giá bán |
+| COGS thấp nhất | =MIN('Tính giá vốn'!H2:H7) | MIN | Sản phẩm hiệu quả nhất |
+| COGS cao nhất | =MAX('Tính giá vốn'!H2:H7) | MAX | Cần xem xét giá bán |
+| Tổng doanh thu (dự tính/ngày) | ='Doanh thu'!E8 | SUM | 100 ly/ngày |
+| Tổng chi phí NL (dự tính/ngày) | ='Doanh thu'!F8 | SUM | 100 ly/ngày |
+| Tổng lợi nhuận (dự tính/ngày) | ='Doanh thu'!G8 | SUM | 100 ly/ngày |
+| Lợi nhuận (dự tính/tháng) | =D6*30 | ×30 | Giả sử 30 ngày |
+| Lợi nhuận (dự tính/năm) | =D7*365 | ×365 | Giả sử 365 ngày |
+
+=================================================================================
+FORMATTING & STYLING
+=================================================================================
+
+SHEET 1 (Nguyên liệu):
+- Header: Bold, Background màu xanh đậm, Text màu trắng
+- Font: Arial 11
+- Column width: A=10, B=25, C=8, D=15, E=20
+
+SHEET 2 (Công thức):
+- Header: Bold, Background màu xanh nhạt
+- Column I (Thành tiền): Currency format (VNĐ), 0 decimal
+- Column H (Giá): Currency format (VNĐ), 0 decimal
+- Column F (Lượng): Number format, 3 decimals
+
+SHEET 3 (Tính giá vốn):
+- Header: Bold, Background màu cam
+- Column D, E, F: Currency format (VNĐ), 0 decimal
+- Column G, H: Percentage format, 2 decimals
+- Column I: Conditional formatting (✓=Green, △=Yellow, ✗=Red)
+- Auto-filter enabled on header row
+
+SHEET 4 (Doanh thu):
+- Header: Bold, Background màu tím
+- Columns C-G: Currency format (VNĐ), 0 decimal
+- Last row (TỔNG): Bold, Background màu vàng nhạt
+- Border: All cells
+
+SHEET 5 (Phân tích):
+- Header: Bold, Background màu đỏ, Text màu trắng
+- Column B: Currency/Percentage format tùy theo dòng
+- Column B: Font size 12, Bold
+
+=================================================================================
+HƯỚNG DẪN SỬ DỤNG
+=================================================================================
+
+1. CẬP NHẬT NGUYÊN LIỆU:
+   - Vào Sheet "Nguyên liệu"
+   - Cập nhật cột "Giá/Đơn vị" theo giá hiện tại
+   - Tất cả các sheet khác sẽ tự động cập nhật
+
+2. ĐIỀU CHỈNH CÔNG THỨC:
+   - Vào Sheet "Công thức"
+   - Thay đổi lượng nguyên liệu ở cột F
+   - Cột I (Thành tiền) sẽ tự động tính lại
+
+3. CẬP NHẬT GIÁ BÁN:
+   - Vào Sheet "Tính giá vốn"
+   - Thay đổi cột E (Giá bán)
+   - Cột G, H sẽ tự động tính lợi nhuận & COGS %
+
+4. XEM DỰ TÍNH DOANH THU:
+   - Vào Sheet "Doanh thu"
+   - Cập nhật cột D (Số lượng/ngày)
+   - Tổng doanh thu, chi phí, lợi nhuận tự động tính
+
+5. PHÂN TÍCH HIỆU NĂNG:
+   - Xem Sheet "Phân tích" để theo dõi KPIs
+   - COGS % nên <= 15% (tối ưu)
+   - COGS % nên >= 20% (cần xem xét giá bán)
+
+=================================================================================
+CÔNG THỨC CHỦ YẾU TRONG EXCEL
+=================================================================================
+
+VLOOKUP:
+=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+Dùng để tìm giá nguyên liệu từ Sheet "Nguyên liệu"
+
+SUMIF:
+=SUMIF(range, criteria, sum_range)
+Dùng để tính tổng chi phí NL cho từng sản phẩm
+
+IF:
+=IF(condition, value_if_true, value_if_false)
+Dùng để hiển thị trạng thái COGS (✓ Tốt / △ Bình thường / ✗ Cao)
+
+AVERAGE, MIN, MAX:
+Dùng để tính chỉ số trung bình, thấp nhất, cao nhất
+
+=================================================================================
+LƯU Ý QUAN TRỌNG
+=================================================================================
+
+✓ Hãy cập nhật giá nguyên liệu hàng tuần
+✓ Kiểm tra COGS % của từng sản phẩm hàng tháng
+✓ Nếu COGS > 20%, hãy xem xét tăng giá bán hoặc giảm chi phí
+✓ Sao lưu file định kỳ
+✓ Đừng xóa các công thức trong các cột tính toán
+✓ Nếu thêm sản phẩm mới, hãy copy công thức từ sản phẩm hiện có
